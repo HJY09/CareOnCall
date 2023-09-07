@@ -12,21 +12,9 @@
           },
           "history": [
             {
-              "date": "2023-08-01",
-              "systolic": 130,
-              "diastolic": 85,
-              "unit": "mmHg"
-            },
-            {
-              "date": "2023-07-01",
-              "systolic": 125,
-              "diastolic": 78,
-              "unit": "mmHg"
-            },
-            {
-              "date": "2023-06-01",
-              "systolic": 128,
-              "diastolic": 82,
+              "date": "2023-04-01",
+              "systolic": 122,
+              "diastolic": 79,
               "unit": "mmHg"
             },
             {
@@ -36,9 +24,21 @@
               "unit": "mmHg"
             },
             {
-              "date": "2023-04-01",
-              "systolic": 122,
-              "diastolic": 79,
+              "date": "2023-06-01",
+              "systolic": 128,
+              "diastolic": 82,
+              "unit": "mmHg"
+            },
+            {
+              "date": "2023-07-01",
+              "systolic": 125,
+              "diastolic": 78,
+              "unit": "mmHg"
+            },
+            {
+              "date": "2023-08-01",
+              "systolic": 130,
+              "diastolic": 85,
               "unit": "mmHg"
             }
           ]
@@ -57,24 +57,24 @@
           "current": 24.2,
           "history": [
             {
-              "date": "2023-08-01",
-              "value": 25.1
-            },
-            {
-              "date": "2023-07-01",
-              "value": 23.8
-            },
-            {
-              "date": "2023-06-01",
-              "value": 24.5
+              "date": "2023-04-01",
+              "value": 23.9
             },
             {
               "date": "2023-05-01",
               "value": 26.3
             },
             {
-              "date": "2023-04-01",
-              "value": 23.9
+              "date": "2023-06-01",
+              "value": 24.5
+            },
+            {
+              "date": "2023-07-01",
+              "value": 23.8
+            },
+            {
+              "date": "2023-08-01",
+              "value": 25.1
             }
           ]
         }

@@ -1,0 +1,75 @@
+{
+    "doctors": [
+      {
+        "id": 1,
+        "name": "Dr. John Smith",
+        "major": "Cardiology",
+        "available_dates": ["2023-09-15", "2023-09-20"],
+        "waiting_list": 8
+      },
+      {
+        "id": 2,
+        "name": "Dr. Sarah Johnson",
+        "major": "Pediatrics",
+        "available_dates": ["2023-09-20", "2023-09-25", "2023-09-26"],
+        "waiting_list": 12
+      },
+      {
+        "id": 3,
+        "name": "Dr. Michael Lee",
+        "major": "Orthopedics",
+        "available_dates": ["2023-09-25", "2023-09-26", "2023-09-27", "2023-09-30"],
+        "waiting_list": 5
+      },
+      {
+        "id": 4,
+        "name": "Dr. Lisa Chen",
+        "major": "Dermatology",
+        "available_dates": ["2023-09-18", "2023-09-22"],
+        "waiting_list": 10
+      },
+      {
+        "id": 5,
+        "name": "Dr. David Williams",
+        "major": "Neurology",
+        "available_dates": ["2023-09-22", "2023-09-26", "2023-09-27"],
+        "waiting_list": 6
+      },
+      {
+        "id": 6,
+        "name": "Dr. Emily Adams",
+        "major": "Ophthalmology",
+        "available_dates": ["2023-09-19", "2023-09-24"],
+        "waiting_list": 15
+      },
+      {
+        "id": 7,
+        "name": "Dr. James Rodriguez",
+        "major": "Gastroenterology",
+        "available_dates": ["2023-09-21", "2023-09-26"],
+        "waiting_list": 9
+      },
+      {
+        "id": 8,
+        "name": "Dr. Maria Martinez",
+        "major": "Obstetrics and Gynecology",
+        "available_dates": ["2023-09-24", "2023-09-26", "2023-09-27", "2023-09-28", "2023-09-29"],
+        "waiting_list": 7
+      },
+      {
+        "id": 9,
+        "name": "Dr. William Brown",
+        "major": "Psychiatry",
+        "available_dates": ["2023-09-17", "2023-09-23", "2023-09-26", "2023-09-28", "2023-09-30", "2023-10-01", "2023-10-05"],
+        "waiting_list": 11
+      },
+      {
+        "id": 10,
+        "name": "Dr. Laura Davis",
+        "major": "Internal Medicine",
+        "available_dates": ["2023-09-23", "2023-09-28"],
+        "waiting_list": 13
+      }
+    ]
+  }
+  
