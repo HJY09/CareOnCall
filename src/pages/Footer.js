@@ -3,7 +3,7 @@ function Footer() {
         <footer>
             <small>
                 &copy; {new Date().getFullYear()} made with{' '}
-                by - {' '} Jennifer
+                by - {' '} Team One
             </small>
         </footer>
     )

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Header from "./Header";
-import data from "./doctor.json"
+import data from "../sources/doctor.json"
 import { MdAccountBox, MdSmartToy, MdCalendarMonth, MdList } from "react-icons/md";
 
 class ContactCard extends Component {

@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import Login from './pages/Login';
 import './styleess.scss'
-import UserDetail from './pages/UserDetail';
+import DateSelect from './pages/DateSelect';
 // import Contacts from './pages/Contacts';
 import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
@@ -17,7 +17,7 @@ function App() {
           <Route path="/" element={<Profile />} />
           <Route path="/docters" exact element={<DoctorAppointment />} />
           <Route path="/login" element={<Login />} />
-          <Route path='/profile/:id' element={<UserDetail />} />
+          <Route path='/profile/:id' element={<DateSelect />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
