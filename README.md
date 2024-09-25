@@ -3,6 +3,8 @@
 ## Achievement
 This **Care-On-Call** project ranked **top 5** in *WIT (Women in Technology) x Atlassian x AWS x McKinsey Hackathon* in 2023.
 
+> Know more about this project, you can view the slides [here](./Happu_Health_Co..pdf).
+
 ## Finished features
 - Login
 E.g. try `username="admin"` & `password="admin"` to login
