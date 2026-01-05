@@ -45,6 +45,11 @@
   "devDependencies": {
     "sass": "^1.66.1"
   },
+  "overrides": {
+    "nth-check": "^2.0.1",
+    "postcss": "^8.4.31",
+    "svgo": "^2.8.0"
+  },
   "description": "<p style=\"text-align:right\">by Jueying Huang (Jennifer) on August 23th, 2023</p>",
   "main": "index.js",
   "directories": {
