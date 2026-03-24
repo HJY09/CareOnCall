@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { MdDensityMedium, MdAccountCircle, MdLogout, MdHome } from "react-icons/md";
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 import logo from "./CareOnCallLogo.png"
 
 class Header extends Component {
@@ -26,7 +26,6 @@ class Header extends Component {
         });
     };
 
-
     render() {
         if (!this.state.islogin) {
             return <Navigate to="/login" />;
@@ -37,12 +36,21 @@ class Header extends Component {
                 <div className="logo">
                     <img src={logo} alt="Logo"/>
                 </div>
-                <h1 className="title" onClick={() => window.location.pathname = "/"}>Care On Call</h1>
+                {/* SECURITY: Use React Router <Link> / <Navigate> instead of
+                    directly mutating window.location.pathname, which bypasses
+                    the router and can introduce open-redirect risks. */}
+                <Link to="/" className="title-link">
+                    <h1 className="title">Care On Call</h1>
+                </Link>
                 <h1 className="density" onClick={this.clickDensity}><MdDensityMedium /></h1>
                 <div className="side-navigation" style={this.state.hidden ? { display: 'none' } : {}} >
-                    <h3 className="side-item" onClick={() => window.location.pathname = '/'}>< MdHome /> Home</h3>
-                    <h3 className="side-item" onClick={() => window.location.pathname = '/profile'}><MdAccountCircle /> Profile</h3>
-                    <h3 className="side-item" onClick={this.signOut}><MdLogout />Logout</h3>
+                    <Link to="/" className="side-item-link">
+                        <h3 className="side-item"><MdHome /> Home</h3>
+                    </Link>
+                    <Link to="/profile" className="side-item-link">
+                        <h3 className="side-item"><MdAccountCircle /> Profile</h3>
+                    </Link>
+                    <h3 className="side-item" onClick={this.signOut}><MdLogout /> Logout</h3>
                 </div>
             </header>
         )

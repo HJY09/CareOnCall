@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Header";
-// import { MdRemoveRedEye } from "react-icons/md";
 import data from "../sources/ProfileData.json";
+import { Link } from "react-router-dom";
 import {
     LineChart,
     Line,
@@ -13,15 +13,11 @@ import {
   } from "recharts";
 
 class GraphTab extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
     return (
-        <LineChart 
-            width={800} 
-            height={300} 
+        <LineChart
+            width={800}
+            height={300}
             data={this.props.data}
             margin={{
                 top: 5,
@@ -58,7 +54,6 @@ class Profile extends Component {
     };
 
     render() {
-        // const hiddenInfo = this.state.hidden ? "*********" : "Here are some hidden information...";
         const patient = data.patient;
         const blood_pressure = patient.vital_signs.blood_pressure;
         const bmi = patient.vital_signs.bmi;
@@ -104,11 +99,16 @@ class Profile extends Component {
                             </ul>
                         </ul>
                     </div>
-                    <h3 className="book-button" onClick={() => window.location.pathname = '/docters'}>Book Appointment</h3>
+                    {/* SECURITY: Use React Router <Link> instead of directly
+                        mutating window.location.pathname to prevent open-redirect
+                        vulnerabilities and maintain proper routing behaviour. */}
+                    <Link to="/docters">
+                        <h3 className="book-button">Book Appointment</h3>
+                    </Link>
                 </div>
             </>
         )
     }
 }
 
-export default Profile
+export default Profile;
