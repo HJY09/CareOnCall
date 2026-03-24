@@ -2,39 +2,36 @@ import React, { Component } from "react";
 import Header from "./Header";
 import data from "../sources/doctor.json"
 import { MdAccountBox, MdSmartToy, MdCalendarMonth, MdList } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 class ContactCard extends Component {
-  constructor(props) {
-      super(props);
-      this.cardClicked = this.cardClicked.bind(this);
-  }
-
-  cardClicked() {
-      window.location.pathname = `/profile/${this.props.id}`;
-  }
-
   render() {
       return (
-          <div className="card" key={this.props.id} onClick={this.cardClicked}>
-              <span className="tooltiptext">Click to View Details</span>
-              <div className="card-title">
-                  {this.props.username}
+          // SECURITY: Use React Router <Link> instead of onClick with
+          // window.location.pathname to prevent open-redirect vulnerabilities
+          // and ensure navigation stays within the app's router context.
+          <Link to={`/profile/${this.props.id}`} className="card-link" key={this.props.id}>
+              <div className="card">
+                  <span className="tooltiptext">Click to View Details</span>
+                  <div className="card-title">
+                      {this.props.username}
+                  </div>
+                  <div className="info">
+                      <p>
+                          <MdAccountBox /> <b>Name:</b> {this.props.name}
+                      </p>
+                      <p>
+                          <MdSmartToy /> <b>Major:</b> {this.props.major}
+                      </p>
+                      <p>
+                          <MdCalendarMonth /> <b>Available Dates:</b> {this.props.available_dates}
+                      </p>
+                      <p>
+                          <MdList /> <b>Waiting List:</b> {this.props.waiting_list}
+                      </p>
+                  </div>
               </div>
-              <div className="info">
-                  <p>
-                      <MdAccountBox /> <b>Name:</b> {this.props.name}
-                  </p>
-                  <p>
-                      <MdSmartToy /> <b>Major:</b> {this.props.major}
-                  </p>
-                  <p>
-                      <MdCalendarMonth /> <b>Available Dates:</b> {this.props.available_dates}
-                  </p>
-                  <p>
-                      <MdList /> <b>Waiting List:</b> {this.props.waiting_list}
-                  </p>
-              </div>
-          </div>
+          </Link>
       )
   }
 }
@@ -57,15 +54,13 @@ class DoctorAppointment extends Component {
                   {!isLoading ? (
                       <div className="card-list">
                           {doctors.map(doctor => (
-                              // <li key={user.id}>{user.name} {user.address.city}</li>
                               <ContactCard
-                                  key = {doctor.id}
-                                  id =  {doctor.id}
-                                  name = {doctor.name}
-                                  major = {doctor.major}
-                                  available_dates = {doctor.available_dates.join(", ")}
-
-                                  waiting_list = {doctor.waiting_list}
+                                  key={doctor.id}
+                                  id={doctor.id}
+                                  name={doctor.name}
+                                  major={doctor.major}
+                                  available_dates={doctor.available_dates.join(", ")}
+                                  waiting_list={doctor.waiting_list}
                               />
                           ))}
                       </div>
